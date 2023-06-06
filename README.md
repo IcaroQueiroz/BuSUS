@@ -1,31 +1,28 @@
-# EmpregaEu 💼
+# BuSUS 🏥
 
-O EmpregaEu é um aplicativo móvel que visa ajudar pessoas desempregadas a conquistar o primeiro emprego. 🎯 O aplicativo oferece uma plataforma que conecta candidatos a empregos e empregadores, com recursos para busca e inscrição em vagas, além de dicas e orientações para aprimorar habilidades e se destacar no mercado de trabalho. 🚀
+O BuSUS é um aplicativo voltado para a área de saúde que tem como objetivo apresentar a localização do ônibus de consultas, permitindo que as pessoas tenham acesso aos exames médicos de forma mais fácil e conveniente. O aplicativo busca desburocratizar e diminuir o absenteísmo dos pacientes, incentivando-os a comparecer às consultas médicas. 🚑
+
+## Funcionalidades ⚙️
+
+### Para administração:
+
+- Cadastro diário do local onde o ônibus das consultas se encontra 📝
+- Exibição dos exames disponíveis no ônibus 🩺
+
+### Para usuários:
+
+- Acesso às informações do programa, incluindo a localização atual do ônibus de consultas 📍
+
+## Contexto e Propósito 📚
+
+Este aplicativo foi desenvolvido como parte de uma atividade acadêmica, com o objetivo de praticar e aplicar os conhecimentos adquiridos em aula. O tema abordado foi "Como podemos reduzir o índice de absenteísmo dos pacientes no comparecimento aos exames e consultas reguladas?". Essa temática faz parte do E.I.T.A (Encontro de Inovação e Tecnologia Aplicada), uma iniciativa que busca soluções inovadoras para os desafios da cidade do Recife. O BuSUS foi concebido como uma resposta a um dos desafios apresentados, visando facilitar o acesso aos exames médicos e diminuir o índice de ausências. 🌟
+
+Link dos desafios do E.I.T.A. do Recife: "https://sites.google.com/recife.pe.gov.br/eita-recife/desafios" .
 
 ## Tecnologias utilizadas 🛠️
 
 - Kotlin
 - Android Studio
-
-
-## Funcionalidades ⚙️
-
-### Para candidatos a empregos:
-
-- Cadastro de perfil com informações pessoais, experiência e habilidades 📝
-- Busca por vagas de emprego com filtros de localização, cargo e salário 🔍
-- Inscrição em vagas com envio de currículo e carta de apresentação 📩
-- Acompanhamento de status das inscrições em vagas 📈
-- Dicas e orientações para aprimorar habilidades e se destacar no mercado de trabalho 💡
-- Chat com empregadores para tirar dúvidas sobre as vagas e o processo seletivo 💬
-
-### Para empregadores:
-
-- Cadastro de perfil com informações da empresa e das vagas disponíveis 📋
-- Publicação de vagas de emprego com informações sobre localização, cargo, salário e requisitos 📣
-- Busca por candidatos a empregos com filtros de localização, experiência e habilidades 🔍
-- Avaliação de currículos e cartas de apresentação enviados pelos candidatos 📄
-- Chat com candidatos para tirar dúvidas sobre o processo seletivo 💬
 
 ## Instalação 🚀
 
@@ -46,3 +43,4 @@ Contribuições são bem-vindas! Para fazer uma contribuição, siga os seguinte
 4. Faça o push para a branch (`git push origin my-new-feature`)
 5. Crie um novo Pull Request
 
+Sinta-se à vontade para personalizar esse README.md de acordo com as características específicas do seu projeto BuSUS. Certifique-se de incluir todas as informações relevantes para os usuários e desenvolvedores interessados no aplicativo. Boa sorte com o seu projeto! 🚀
