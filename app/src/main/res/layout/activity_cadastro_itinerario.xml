@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroVagaActivity">
+    tools:context=".CadastroItinerarioActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,37 +20,37 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ADMIN CADASTRO VAGAS"
+            android:text="ADMIN CADASTRO ITINERARIO"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:textAlignment="center"/>
 
         <EditText
-            android:id="@+id/edEmpresa"
+            android:id="@+id/edData"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_marginTop="20dp"
-            android:hint="Empresa" />
+            android:ems="10"
+            android:hint="Data"
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/edCargo"
+            android:id="@+id/edCidade"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_marginTop="20dp"
-            android:hint="Cargo" />
+            android:ems="10"
+            android:hint="Cidade"
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/edSalario"
+            android:id="@+id/edExame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
             android:layout_marginTop="20dp"
-            android:hint="Salário" />
+            android:ems="10"
+            android:hint="Exame"
+            android:inputType="textPersonName" />
 
         <Button
             android:id="@+id/button"

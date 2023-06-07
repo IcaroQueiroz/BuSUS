@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class EmpAdapter(private val empList: ArrayList<EmpresaModelo>) :
-    RecyclerView.Adapter<EmpAdapter.ViewHolder>() {
+class OniAdapter(private val oniList: ArrayList<ItinerarioModelo>) :
+    RecyclerView.Adapter<OniAdapter.ViewHolder>() {
 
    // private lateinit var mListener: onItemClickListener
 
@@ -20,24 +20,28 @@ class EmpAdapter(private val empList: ArrayList<EmpresaModelo>) :
 //    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.emp_list_item, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.oni_list_item, parent, false)
         return ViewHolder(itemView)
         //return ViewHolder(itemView, mListener)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val currentEmp = empList[position]
-        holder.tvEmpName.text = currentEmp.empNome
+        val currentItem = oniList[position]
+        holder.tvOniName.text = currentItem.oniData
+        holder.tvOniCity.text = currentItem.oniCidade
+        holder.tvOniExame.text = currentItem.oniExame
     }
 
     override fun getItemCount(): Int {
-        return empList.size
+        return oniList.size
     }
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val tvEmpName : TextView = itemView.findViewById(R.id.tvEmpName)
+        val tvOniName : TextView = itemView.findViewById(R.id.tvOniData)
+        val tvOniCity: TextView = itemView.findViewById(R.id.tvOniCity)
+        val tvOniExame: TextView = itemView.findViewById(R.id.tvOniExame)
 
 
     }

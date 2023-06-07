@@ -8,22 +8,22 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.database.*
 
-class ListaVagasActivity : AppCompatActivity() {
-    private lateinit var empRecyclerView: RecyclerView
+class ListaItinerarioActivity : AppCompatActivity() {
+    private lateinit var oniRecyclerView: RecyclerView
     private lateinit var tvLoadingData: TextView
-    private lateinit var empList: ArrayList<EmpresaModelo>
+    private lateinit var oniList: ArrayList<ItinerarioModelo>
     private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_lista_vagas)
+        setContentView(R.layout.activity_lista)
 
-        empRecyclerView = findViewById(R.id.listVagas)
-        empRecyclerView.layoutManager = LinearLayoutManager(this)
-        empRecyclerView.setHasFixedSize(true)
+        oniRecyclerView = findViewById(R.id.listVagas)
+        oniRecyclerView.layoutManager = LinearLayoutManager(this)
+        oniRecyclerView.setHasFixedSize(true)
         tvLoadingData = findViewById(R.id.tvLoadingData)
 
-        empList = arrayListOf<EmpresaModelo>()
+        oniList = arrayListOf<ItinerarioModelo>()
 
         getEmployeesData()
 
@@ -31,38 +31,38 @@ class ListaVagasActivity : AppCompatActivity() {
 
     private fun getEmployeesData() {
 
-        empRecyclerView.visibility = View.GONE
+        oniRecyclerView.visibility = View.GONE
         tvLoadingData.visibility = View.VISIBLE
 
-        dbRef = FirebaseDatabase.getInstance().getReference("Empregador")
+        dbRef = FirebaseDatabase.getInstance().getReference("Onibus")
 
         dbRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
-                empList.clear()
+                oniList.clear()
                 if (snapshot.exists()){
                     for (empSnap in snapshot.children){
-                        val empData = empSnap.getValue(EmpresaModelo::class.java)
-                        empList.add(empData!!)
+                        val empData = empSnap.getValue(ItinerarioModelo::class.java)
+                        oniList.add(empData!!)
                     }
-                    val mAdapter = EmpAdapter(empList)
-                    empRecyclerView.adapter = mAdapter
+                    val mAdapter = OniAdapter(oniList)
+                    oniRecyclerView.adapter = mAdapter
 
-//                    mAdapter.setOnItemClickListener(object : EmpAdapter.onItemClickListener{
+//                    mAdapter.setOnItemClickListener(object : OniAdapter.onItemClickListener{
 //                        override fun onItemClick(position: Int) {
 //
 //                            val intent = Intent(this@FetchingActivity, EmployeeDetailsActivity::class.java)
 //
 //                            //put extras
-//                            intent.putExtra("empId", empList[position].empId)
-//                            intent.putExtra("empName", empList[position].empNome)
-//                            intent.putExtra("empCargo", empList[position].empCargo)
-//                            intent.putExtra("empSalary", empList[position].emSalario)
+//                            intent.putExtra("oniId", oniList[position].oniId)
+//                            intent.putExtra("oniData", oniList[position].oniData)
+//                            intent.putExtra("oniCidade", oniList[position].oniCidade)
+//                            intent.putExtra("oniExame", oniList[position].oniExame)
 //                            startActivity(intent)
 //                        }
 //
 //                    })
 
-                    empRecyclerView.visibility = View.VISIBLE
+                    oniRecyclerView.visibility = View.VISIBLE
                     tvLoadingData.visibility = View.GONE
                 }
             }

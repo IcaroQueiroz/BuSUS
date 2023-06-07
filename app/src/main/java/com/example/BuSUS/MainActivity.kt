@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
         btLogin.setOnClickListener {
             if(edNome.text.toString()=="Admin") {
-                val inten = Intent(this, CadastroVagaActivity::class.java)
+                val inten = Intent(this, CadastroItinerarioActivity::class.java)
                 //val texto = edNome.text.toString()
                 //inten.putExtra("nome", texto)
                 startActivity(inten)
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 myRef.setValue("Hello, World!")
             }
             else{
-                val inten = Intent(this, ListaVagasActivity::class.java)
+                val inten = Intent(this, ListaItinerarioActivity::class.java)
                 startActivity(inten)
               //  Toast.makeText(this, R.string.msgError, Toast.LENGTH_SHORT).show()
               //  btLogin.text = edNome.text.toString()
