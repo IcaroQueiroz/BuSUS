@@ -43,4 +43,3 @@ Contribuições são bem-vindas! Para fazer uma contribuição, siga os seguinte
 4. Faça o push para a branch (`git push origin my-new-feature`)
 5. Crie um novo Pull Request
 
-Sinta-se à vontade para personalizar esse README.md de acordo com as características específicas do seu projeto BuSUS. Certifique-se de incluir todas as informações relevantes para os usuários e desenvolvedores interessados no aplicativo. Boa sorte com o seu projeto! 🚀
